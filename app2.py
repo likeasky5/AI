@@ -36,16 +36,12 @@ plt.rc('font', family=fontname)
 
 # DataFrame 생성
 df = pd.DataFrame({
-    '이름': ['영수', '철수', '민수'],
-    '나이': [22, 31, 25],
-    '몸무게': [75.5, 80.2, 65.1]
+    '과목': ['국어', '수학', '영어'],
+    '점수': [70, 85, 100],
 })
 
 st.dataframe(df, use_container_width=True)
 # subplots를 실행하면 두 가지 값이 나옵니다. 
 fig, ax = plt.subplots()
-ax.bar(df['이름'], df['나이'])
+ax.bar(df['과목'], df['점수'])
 st.pyplot(fig)
-import sys
-
-print("현재 Python 버전:", sys.version)
